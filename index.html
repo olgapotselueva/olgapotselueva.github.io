@@ -81,9 +81,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .feat::-webkit-scrollbar{display:none}
   .feat .item{flex:0 0 78%;scroll-snap-align:center}
 }
-.stat{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:16px 20px;background:var(--pink);border-radius:2px}
-.stat b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(34px,6vw,48px);line-height:1}
-.stat p{font-family:var(--mono);font-size:13px;max-width:48ch}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--pink);border-radius:2px;overflow:hidden}
+.st{background:var(--pink);padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px} .st:nth-child(even){background:#F3DDE2}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.st{padding:14px 12px 16px} .st b{font-size:30px} .st p{font-size:11.5px}}
+.st b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(34px,5vw,46px);line-height:1}
+.st p{font-family:var(--mono);font-size:12.5px;line-height:1.45}
 .brandrow{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding-top:18px}
 .br-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
 .br-head h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(28px,4.6vw,38px);line-height:1}
@@ -198,7 +201,12 @@ footer{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:cent
 <section class="sec" id="reels">
   <div class="sec-head"><span class="mono">нажмите на ролик, чтобы посмотреть со звуком</span><h2>Ролики</h2></div>
   <div class="feat"><figure class="item big"><div class="frame"><video preload="none" playsinline poster="m/franui06.jpg" src="m/franui06.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div><figcaption><span class="mono">Franui</span>Балерина в городе</figcaption></figure><figure class="item big"><div class="frame"><video preload="none" playsinline poster="m/vs00.jpg" src="m/vs00.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div><figcaption><span class="mono">Vivienne Sabo</span>Серебро, красный бархат и помада</figcaption></figure><figure class="item big"><div class="frame sq"><video preload="none" playsinline poster="m/maag06.jpg" src="m/maag06.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div><figcaption><span class="mono">MAAG</span>Два образа, один кадр</figcaption></figure></div>
-  <div class="stat"><b>12–21 тыс.</b><p>органических просмотров на ролик на новом непрогретом аккаунте MAAG, без таргета</p></div>
+  <div class="stats">
+    <div class="st"><b>8 млн+</b><p>просмотров за полгода в TikTok Vivienne Sabo, 100+ роликов в разных жанрах</p></div>
+    <div class="st"><b>570 тыс.</b><p>просмотров и 18,3&nbsp;тыс. пересылок у одного ролика hh.ru</p></div>
+    <div class="st"><b>12–21 тыс.</b><p>органических просмотров на ролик на новом непрогретом аккаунте MAAG, без таргета</p></div>
+    <div class="st"><b>×2</b><p>переходов на сайт MADEMAN, 10&nbsp;000+ просмотров роликов за 2 месяца</p></div>
+  </div>
   <div class="brandrow">
   <div class="br-head"><h3>Vivienne Sabo</h3><span class="mono">beauty</span><a class="more" href="https://www.instagram.com/viviennesabo.official/" target="_blank" rel="noopener">больше на странице бренда · @viviennesabo.official ↗</a></div>
   <div class="track" tabindex="0" aria-label="Ролики Vivienne Sabo"><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs00.jpg" src="m/vs00.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs01.jpg" src="m/vs01.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs02.jpg" src="m/vs02.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs03.jpg" src="m/vs03.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs04.jpg" src="m/vs04.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs05.jpg" src="m/vs05.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs06.jpg" src="m/vs06.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs07.jpg" src="m/vs07.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs08.jpg" src="m/vs08.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs09.jpg" src="m/vs09.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs10.jpg" src="m/vs10.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs11.jpg" src="m/vs11.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs13.jpg" src="m/vs13.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs14.jpg" src="m/vs14.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure><figure class="item"><div class="frame"><video preload="none" playsinline poster="m/vs15.jpg" src="m/vs15.mp4"></video><button class="play" type="button" aria-label="Смотреть ролик"><span></span></button></div></figure></div>
@@ -272,22 +280,22 @@ footer{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:cent
   <div class="cards">
     <article class="card"><div class="top"><h3>Vivienne Sabo</h3><span class="mono">beauty</span></div>
       <p>Контентные концепции, поиск и координация контент-мейкеров, организация съёмок. Сама снимала и монтировала, делала event-контент на мероприятиях.</p>
-      <span class="acc">дорогой продакшн на маленьком бюджете</span></article>
+      <span class="acc">8 млн+ просмотров за полгода в TikTok, 100+ роликов: от туториалов до ASMR</span></article>
     <article class="card"><div class="top"><h3>MAAG</h3><span class="mono">fashion</span></div>
       <p>Сценарии и производство роликов для нового аккаунта бренда, от идеи до готового видео.</p>
       <span class="acc">12–21 тыс. просмотров без таргета</span></article>
     <article class="card"><div class="top"><h3>Альфа-Банк</h3><span class="mono">event</span></div>
-      <p>Координировала команду рилсмейкеров прямо на площадке: снимали по заготовленным сценариям, монтировали и отдавали ролики в реальном времени.</p>
+      <p>Писала сценарии и координировала команду рилсмейкеров прямо на площадке: снимали по этим сценариям, монтировали и отдавали ролики в реальном времени.</p>
       <span class="acc">контент в моменте</span></article>
     <article class="card"><div class="top"><h3>NUME · MADEMAN</h3><span class="mono">fashion</span></div>
       <p>Сценарии, реквизит, локации, герои, организация съёмок. Сама стилизовала образы.</p>
-      <span class="acc">знаю, как делать контент для разных аудиторий: девушек, парней, детей, разных возрастов</span></article>
+      <span class="acc">MADEMAN: ×2 переходов на сайт за счёт контент-мейкеров. Знаю, как делать контент для разных аудиторий: девушек, парней, детей, разных возрастов</span></article>
     <article class="card"><div class="top"><h3>Franui</h3><span class="mono">food · lifestyle</span></div>
       <p>Идеи и сценарии роликов, подбор реквизита, съёмка и доведение до готового видео.</p>
-      <span class="acc">малина в шоколаде, но красиво</span></article>
+      <span class="acc">балетная эстетика в роликах про десерт: балерина в городе</span></article>
     <article class="card"><div class="top"><h3>HeadHunter</h3><span class="mono">brand · моушн</span></div>
       <p>Монтаж роликов, затем продюсирование моушн-видео вместе с аниматором и озвучкой.</p>
-      <span class="acc">мемы тоже умею</span></article>
+      <span class="acc">до 570 тыс. просмотров и 18,3&nbsp;тыс. пересылок на ролик</span></article>
   </div>
 </section>
 
